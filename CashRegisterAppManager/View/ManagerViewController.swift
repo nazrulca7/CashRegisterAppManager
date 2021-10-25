@@ -9,6 +9,7 @@ import UIKit
 
 class ManagerViewController: UIViewController {
 
+    var ProductVar: Product = Product()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,4 +27,16 @@ class ManagerViewController: UIViewController {
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toRestockView"){
+         
+            let RestockView = segue.destination as! RestockViewController
+            RestockView.ProductVar = ProductVar
+        }
+        
+       
+   
+    
+    }
+    
 }

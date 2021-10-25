@@ -15,9 +15,6 @@ class ProductHistory{
     var productsaleTime: Date
    // let dateFormatter : DateFormatter = DateFormatter()
   
-  
-
-   
     
     init(pName:String, pQty:Int, pPrice: Int ){
         let currentDate = Date()

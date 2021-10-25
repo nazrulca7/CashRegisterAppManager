@@ -20,15 +20,16 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     var loadtimes : Int = 0
     var loadQty : Int = 0
     var addForBuy : Int = 0
-    var Products = [Product]()
+    var Products : Product  = Product()
     
-    var productStock = [ProductStock]()
-    var vProductHistory = [ProductHistory]()
+    //var productStock : ProductStock = [ProductStock]()
+    var vProductHistory  =  [ProductHistory]()
     
     @IBOutlet weak var txtTotalDisplay: UITextField!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productStock.count
+        
+        return (Products.getAllProducts().count)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,17 +39,20 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         print(indexPath.row)
-        cell.textLabel?.text = String(productStock[indexPath.row].productName) + "\n \(String(productStock[indexPath.row].prodcutPrice))"
-        cell.detailTextLabel?.text = String(productStock[indexPath.row].productQty)
+        cell.textLabel?.text = Products.getAllProducts()[indexPath.row].productName
+        
+       /*String(productStock[indexPath.row].productName) + "\n //\(String(productStock[indexPath.row].prodcutPrice))"
+        */
+        cell.detailTextLabel?.text = String(Products.getAllProducts()[indexPath.row].productQty)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
         // print(indexPath)
-        let selectedTrail = productStock[indexPath.row].productName
-        let selectQty = productStock[indexPath.row].productQty
-        let productPrice = productStock[indexPath.row].prodcutPrice
+        let selectedTrail = Products.getAllProducts()[indexPath.row].productName
+        let selectQty = Products.getAllProducts()[indexPath.row].productQty
+        let productPrice = Products.getAllProducts()[indexPath.row].prodcutPrice
         let totalAmount = Float(selectQty) * productPrice
         print(selectedTrail)
         if (selectedTrail != ""){
@@ -66,39 +70,22 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         VIEWProductTbl.dataSource=self
-        navigationItem.title = "Your Title"
-        //qtyShowtxt.isUserInteractionEnabled = false
-        if(loadtimes==0){
-            
-            let productS = ProductStock(pName: "Pant", pQty:20, pPrice:50.7)
-        productStock.append(productS)
-            let  productS1 = ProductStock(pName: "Shoes", pQty:50, pPrice:90)
-        productStock.append(productS1)
-            let productS2 = ProductStock(pName: "Hates", pQty:10, pPrice:20.5)
-        productStock.append(productS2)
-        let productS3 = ProductStock(pName: "T-Shirts", pQty:10, pPrice:10)
-        productStock.append(productS3)
-        let productS4 = ProductStock(pName: "Dresses", pQty:24, pPrice:10)
-        productStock.append(productS4)
-            loadtimes+=1
-           
-        }
-        
-        // Do any additional setup after loading the view.
+        navigationItem.title = "Cash Register App"
+       
     }
 
     @IBAction func addListbtn(_ sender: Any) {
        
         addForBuy = Int(qtyShowtxt.text!) ?? 0
         print("addforBuy\(addForBuy) And Load \(self.loadQty)")
-        if(addForBuy > loadQty){
+        if(addForBuy > loadQty){ //if product Qty is more than availability
             
             let alert = UIAlertController(title: "Quantity Error", message: "Quantity exceed Avaliablity", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Update Quantity", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             qtyShowtxt.text = String(loadQty )
         }
-        
+        //Sales confirmation
         let alert = UIAlertController(title: "Do you want to add product to Cart?", message: "Are you sure?", preferredStyle: .alert)
         let action1 = UIAlertAction(title: "add", style: .default){ action
              in
@@ -111,19 +98,21 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
                   
                   Int(self.lblTotalAmountShow.text!)
                     
-                    let newProduct = Product(n: name, amount: total ?? 0)
+                  //  let newProduct = Product(n: name, amount: total ?? 0)
                     
-                  if let product_id = self.productStock.firstIndex(where: {$0.productName == self.txtInputProductName.text}) {
+                let findProduct =   self.Products.getAllProducts()
+                  
+                  if let product_id = findProduct.firstIndex(where: {$0.productName == self.txtInputProductName.text}) {
                      // do something with foo
                       
-                      var productQty=self.productStock[product_id].productQty
-                      var productName=self.productStock[product_id].productName
-                      var prodctPrice=self.productStock[product_id].prodcutPrice
+                      var productQty=findProduct[product_id].productQty
+                      var productName=findProduct[product_id].productName
+                      var prodctPrice=findProduct[product_id].prodcutPrice
                 
                      
                       
                       let  producth = ProductHistory(pName: productName, pQty:productQty, pPrice:Int(prodctPrice))
-                      self.productStock[product_id].productQty =  productQty - self.addForBuy
+                      findProduct[product_id].productQty =  productQty - self.addForBuy
                       
                       self.vProductHistory.append(producth)
                       
@@ -210,6 +199,17 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         
     }
   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toManagerPage"){
+            
+            let ManagerView = segue.destination as? ManagerViewController
+            ManagerView!.ProductVar = Products
+        }
+        
+       
+   
+    
+    }
   
     
     
