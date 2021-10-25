@@ -1,0 +1,2 @@
+# CashRegisterAppManager
+ ios development 
