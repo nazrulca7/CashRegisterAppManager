@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10F63541272669410052877D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63540272669410052877D /* AppDelegate.swift */; };
+		10F63543272669410052877D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63542272669410052877D /* SceneDelegate.swift */; };
+		10F63545272669410052877D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63544272669410052877D /* ViewController.swift */; };
+		10F63548272669410052877D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F63546272669410052877D /* Main.storyboard */; };
+		10F6354A272669420052877D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F63549272669420052877D /* Assets.xcassets */; };
+		10F6354D272669420052877D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F6354B272669420052877D /* LaunchScreen.storyboard */; };
+		10F6355727266B740052877D /* productStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6355427266B740052877D /* productStock.swift */; };
+		10F6355827266B740052877D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6355527266B740052877D /* Product.swift */; };
+		10F6355927266B740052877D /* ProductHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6355627266B740052877D /* ProductHistory.swift */; };
+		10F6355F272672040052877D /* ManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6355E272672040052877D /* ManagerViewController.swift */; };
+		10F63561272712E80052877D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63560272712E80052877D /* HistoryViewController.swift */; };
+		10F63563272712FE0052877D /* RestockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63562272712FE0052877D /* RestockViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10F6353D272669400052877D /* CashRegisterAppManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashRegisterAppManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F63540272669410052877D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10F63542272669410052877D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		10F63544272669410052877D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10F63547272669410052877D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10F63549272669420052877D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10F6354C272669420052877D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10F6354E272669420052877D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F6355427266B740052877D /* productStock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = productStock.swift; sourceTree = "<group>"; };
+		10F6355527266B740052877D /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		10F6355627266B740052877D /* ProductHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductHistory.swift; sourceTree = "<group>"; };
+		10F6355E272672040052877D /* ManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewController.swift; sourceTree = "<group>"; };
+		10F63560272712E80052877D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		10F63562272712FE0052877D /* RestockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestockViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10F6353A272669400052877D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10F63534272669400052877D = {
+			isa = PBXGroup;
+			children = (
+				10F6353F272669400052877D /* CashRegisterAppManager */,
+				10F6353E272669400052877D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10F6353E272669400052877D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10F6353D272669400052877D /* CashRegisterAppManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10F6353F272669400052877D /* CashRegisterAppManager */ = {
+			isa = PBXGroup;
+			children = (
+				10F6355A27266BA40052877D /* Model */,
+				10F63540272669410052877D /* AppDelegate.swift */,
+				10F63542272669410052877D /* SceneDelegate.swift */,
+				10F6355B27266BDA0052877D /* View */,
+				10F63546272669410052877D /* Main.storyboard */,
+				10F63549272669420052877D /* Assets.xcassets */,
+				10F6354B272669420052877D /* LaunchScreen.storyboard */,
+				10F6354E272669420052877D /* Info.plist */,
+			);
+			path = CashRegisterAppManager;
+			sourceTree = "<group>";
+		};
+		10F6355A27266BA40052877D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10F6355427266B740052877D /* productStock.swift */,
+				10F6355627266B740052877D /* ProductHistory.swift */,
+				10F6355527266B740052877D /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10F6355B27266BDA0052877D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10F63544272669410052877D /* ViewController.swift */,
+				10F6355E272672040052877D /* ManagerViewController.swift */,
+				10F63560272712E80052877D /* HistoryViewController.swift */,
+				10F63562272712FE0052877D /* RestockViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10F6353C272669400052877D /* CashRegisterAppManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10F63551272669420052877D /* Build configuration list for PBXNativeTarget "CashRegisterAppManager" */;
+			buildPhases = (
+				10F63539272669400052877D /* Sources */,
+				10F6353A272669400052877D /* Frameworks */,
+				10F6353B272669400052877D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CashRegisterAppManager;
+			productName = CashRegisterAppManager;
+			productReference = 10F6353D272669400052877D /* CashRegisterAppManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10F63535272669400052877D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					10F6353C272669400052877D = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 10F63538272669400052877D /* Build configuration list for PBXProject "CashRegisterAppManager" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10F63534272669400052877D;
+			productRefGroup = 10F6353E272669400052877D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10F6353C272669400052877D /* CashRegisterAppManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10F6353B272669400052877D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F6354D272669420052877D /* LaunchScreen.storyboard in Resources */,
+				10F6354A272669420052877D /* Assets.xcassets in Resources */,
+				10F63548272669410052877D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10F63539272669400052877D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F63545272669410052877D /* ViewController.swift in Sources */,
+				10F63541272669410052877D /* AppDelegate.swift in Sources */,
+				10F63563272712FE0052877D /* RestockViewController.swift in Sources */,
+				10F6355927266B740052877D /* ProductHistory.swift in Sources */,
+				10F6355827266B740052877D /* Product.swift in Sources */,
+				10F6355727266B740052877D /* productStock.swift in Sources */,
+				10F63543272669410052877D /* SceneDelegate.swift in Sources */,
+				10F6355F272672040052877D /* ManagerViewController.swift in Sources */,
+				10F63561272712E80052877D /* HistoryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		10F63546272669410052877D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10F63547272669410052877D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10F6354B272669420052877D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10F6354C272669420052877D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10F6354F272669420052877D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10F63550272669420052877D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10F63552272669420052877D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CashRegisterAppManager/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CashRegisterAppManager;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CashRegisterAppManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10F63553272669420052877D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CashRegisterAppManager/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CashRegisterAppManager;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CashRegisterAppManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10F63538272669400052877D /* Build configuration list for PBXProject "CashRegisterAppManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10F6354F272669420052877D /* Debug */,
+				10F63550272669420052877D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10F63551272669420052877D /* Build configuration list for PBXNativeTarget "CashRegisterAppManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10F63552272669420052877D /* Debug */,
+				10F63553272669420052877D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10F63535272669400052877D /* Project object */;
+}
