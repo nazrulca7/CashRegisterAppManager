@@ -32,7 +32,7 @@ class RestockViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        reStockTblView.dataSource = self
+        self.reStockTblView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
