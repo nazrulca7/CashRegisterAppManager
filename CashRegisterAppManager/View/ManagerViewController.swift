@@ -9,7 +9,7 @@ import UIKit
 
 class ManagerViewController: UIViewController {
 
-    var ProductVar: Product = Product()
+    var ProductVar: Product?
     override func viewDidLoad() {
         super.viewDidLoad()
 

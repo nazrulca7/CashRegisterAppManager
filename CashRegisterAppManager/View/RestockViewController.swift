@@ -80,22 +80,23 @@ class RestockViewController: UIViewController,UITableViewDelegate,UITableViewDat
          
                //Sales confirmation
                let alert = UIAlertController(title: "Do you want to Restock product ?", message: "Are you sure?", preferredStyle: .alert)
-               let action1 = UIAlertAction(title: "add", style: .default){ action
+        let action1 = UIAlertAction(title: "add", style: .default){ action
                     in
                    if let RestockQty = self.txtStockProduct.text {
                        
                        let findProduct =   self.ProductVar?.getAllProducts()
                        let productQty = findProduct?[self.selectedRowId].productQty
                        var productName = findProduct?[self.selectedRowId].productName
-                       var prodctPrice = findProduct?[self.selectedRowId].prodcutPrice
+                       var prodctPrice =  findProduct?[self.selectedRowId].prodcutPrice
                  
+                       var qty = findProduct?[self.selectedRowId].productQty
                        
                        let  producthistory = ProductHistory(pName: productName ?? "", pQty:productQty ?? 0, pPrice:Int(prodctPrice ?? 0))
                        
                       
                        self.HistoryModel.addNewHistoryProduct(newproduct: producthistory)
                        
-                       findProduct?[self.selectedRowId].productQty =  productQty ?? 0 + self.addForInventory
+                       findProduct?[self.selectedRowId].productQty =  (productQty ?? 0) + self.addForInventory
                        
                      
                    }
