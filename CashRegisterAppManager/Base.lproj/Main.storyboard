@@ -368,6 +368,27 @@
                                     <outlet property="delegate" destination="k0T-ZF-Ij9" id="oiZ-Kg-iq7"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uig-o7-KGh">
+                                <rect key="frame" x="42" y="106" width="313" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTL-fe-4Uv">
+                                <rect key="frame" x="52" y="159" width="112" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restock"/>
+                                <connections>
+                                    <action selector="btnRestock:" destination="Xq8-ZE-3do" eventType="touchUpInside" id="Pfd-zy-Bb1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mv-Gq-t0t">
+                                <rect key="frame" x="245" y="161" width="110" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vNU-Yn-GEK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -375,11 +396,12 @@
                     <navigationItem key="navigationItem" id="0SF-hW-ZL8"/>
                     <connections>
                         <outlet property="reStockTblView" destination="bEu-Ql-Qhw" id="BF5-ZK-xnH"/>
+                        <outlet property="txtStockProduct" destination="uig-o7-KGh" id="Nei-Rz-RHN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giX-7K-TX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-962" y="-90"/>
+            <point key="canvasLocation" x="-962.31884057971024" y="-90.401785714285708"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="dca-Vj-ndc">

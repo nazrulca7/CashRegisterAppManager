@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1037DACC272886950079D775 /* ProductHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037DACB272886950079D775 /* ProductHistoryModel.swift */; };
 		10F63541272669410052877D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63540272669410052877D /* AppDelegate.swift */; };
 		10F63543272669410052877D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63542272669410052877D /* SceneDelegate.swift */; };
 		10F63545272669410052877D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63544272669410052877D /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1037DACB272886950079D775 /* ProductHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductHistoryModel.swift; sourceTree = "<group>"; };
 		10F6353D272669400052877D /* CashRegisterAppManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashRegisterAppManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F63540272669410052877D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10F63542272669410052877D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		10F6355A27266BA40052877D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1037DACB272886950079D775 /* ProductHistoryModel.swift */,
 				10F6355427266B740052877D /* productStock.swift */,
 				10F6355627266B740052877D /* ProductHistory.swift */,
 				10F6355527266B740052877D /* Product.swift */,
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1037DACC272886950079D775 /* ProductHistoryModel.swift in Sources */,
 				10F63545272669410052877D /* ViewController.swift in Sources */,
 				10F63541272669410052877D /* AppDelegate.swift in Sources */,
 				10F63563272712FE0052877D /* RestockViewController.swift in Sources */,
