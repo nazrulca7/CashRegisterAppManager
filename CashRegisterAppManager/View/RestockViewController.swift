@@ -102,6 +102,7 @@ class RestockViewController: UIViewController,UITableViewDelegate,UITableViewDat
                    }
                    self.reStockTblView.reloadData()
                    self.selectedRowId = -1
+            self.txtStockProduct.text  = ""
                    
                }
                let action2 = UIAlertAction(title: "No", style: .cancel, handler: nil)
