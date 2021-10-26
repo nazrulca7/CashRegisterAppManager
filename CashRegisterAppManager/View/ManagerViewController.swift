@@ -10,6 +10,8 @@ import UIKit
 class ManagerViewController: UIViewController {
 
     var ProductVar: Product?
+   
+    var HistoryModel : ProductHistoryModel?
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -116,7 +116,12 @@ class RestockViewController: UIViewController,UITableViewDelegate,UITableViewDat
            }
 
   
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ManagerView = segue.destination as? ManagerViewController
+        ManagerView!.ProductVar = ProductVar
+        ManagerView?.HistoryModel = HistoryModel
+        
+    }
 
     /*
     // MARK: - Navigation

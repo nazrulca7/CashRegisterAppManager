@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1037DACC272886950079D775 /* ProductHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037DACB272886950079D775 /* ProductHistoryModel.swift */; };
+		1037DACE27289D260079D775 /* textviewtbl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037DACD27289D260079D775 /* textviewtbl.xib */; };
 		10F63541272669410052877D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63540272669410052877D /* AppDelegate.swift */; };
 		10F63543272669410052877D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63542272669410052877D /* SceneDelegate.swift */; };
 		10F63545272669410052877D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63544272669410052877D /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		1037DACB272886950079D775 /* ProductHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductHistoryModel.swift; sourceTree = "<group>"; };
+		1037DACD27289D260079D775 /* textviewtbl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = textviewtbl.xib; sourceTree = "<group>"; };
 		10F6353D272669400052877D /* CashRegisterAppManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashRegisterAppManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F63540272669410052877D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10F63542272669410052877D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				10F63549272669420052877D /* Assets.xcassets */,
 				10F6354B272669420052877D /* LaunchScreen.storyboard */,
 				10F6354E272669420052877D /* Info.plist */,
+				1037DACD27289D260079D775 /* textviewtbl.xib */,
 			);
 			path = CashRegisterAppManager;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				10F6354D272669420052877D /* LaunchScreen.storyboard in Resources */,
 				10F6354A272669420052877D /* Assets.xcassets in Resources */,
+				1037DACE27289D260079D775 /* textviewtbl.xib in Resources */,
 				10F63548272669410052877D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

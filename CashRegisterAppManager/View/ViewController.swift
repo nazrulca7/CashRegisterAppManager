@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     var loadtimes : Int = 0
     var loadQty : Int = 0
     var addForBuy : Int = 0
-    var Products : Product  = Product()
+    var Products : Product = Product()
     
     //var productStock : ProductStock = [ProductStock]()
     var vProductHistory  =  [ProductHistory]()
@@ -72,6 +72,10 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         VIEWProductTbl.dataSource=self
         navigationItem.title = "Cash Register App"
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.VIEWProductTbl.reloadData()
     }
 
     @IBAction func addListbtn(_ sender: Any) {
