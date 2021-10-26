@@ -84,7 +84,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         print("addforBuy\(addForBuy) And Load \(self.loadQty)")
         if(addForBuy > loadQty){ //if product Qty is more than availability
             
-            let alert = UIAlertController(title: "Quantity Error", message: "Quantity exceed Avaliablity", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Error", message: "Quantity exceed Avaliablity", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Update Quantity", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             qtyShowtxt.text = String(loadQty )
