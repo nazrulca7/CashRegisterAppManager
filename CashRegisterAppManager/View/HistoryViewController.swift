@@ -12,7 +12,7 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
    
     var HistoryModel : ProductHistoryModel?
-    
+    var SelectRowId : Int = -1
     @IBOutlet weak var tblHistoryshow: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,14 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+         
+       
+        SelectRowId = indexPath.row
+        
+          
+          
+      }
 
     
   
@@ -48,10 +55,18 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let selectedIndex1 = self.tblHistoryshow.indexPath(for: sender as! UITableViewCell)
+        let HistoryDtlView = segue.destination as? HistoryDtlViewController
+        HistoryDtlView?.SelectRowId = selectedIndex1!.row
+        HistoryDtlView?.HistoryModel =  HistoryModel
+        
+       
     }
-    */
+    
 
 }
+

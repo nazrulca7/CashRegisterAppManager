@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1037DACC272886950079D775 /* ProductHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1037DACB272886950079D775 /* ProductHistoryModel.swift */; };
 		1037DACE27289D260079D775 /* textviewtbl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1037DACD27289D260079D775 /* textviewtbl.xib */; };
+		10E12CFC272B26600038A939 /* HistoryDtlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E12CFB272B26600038A939 /* HistoryDtlViewController.swift */; };
 		10F63541272669410052877D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63540272669410052877D /* AppDelegate.swift */; };
 		10F63543272669410052877D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63542272669410052877D /* SceneDelegate.swift */; };
 		10F63545272669410052877D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F63544272669410052877D /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		1037DACB272886950079D775 /* ProductHistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductHistoryModel.swift; sourceTree = "<group>"; };
 		1037DACD27289D260079D775 /* textviewtbl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = textviewtbl.xib; sourceTree = "<group>"; };
+		10E12CFB272B26600038A939 /* HistoryDtlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDtlViewController.swift; sourceTree = "<group>"; };
 		10F6353D272669400052877D /* CashRegisterAppManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashRegisterAppManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F63540272669410052877D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10F63542272669410052877D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				10F6355E272672040052877D /* ManagerViewController.swift */,
 				10F63560272712E80052877D /* HistoryViewController.swift */,
 				10F63562272712FE0052877D /* RestockViewController.swift */,
+				10E12CFB272B26600038A939 /* HistoryDtlViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				1037DACC272886950079D775 /* ProductHistoryModel.swift in Sources */,
 				10F63545272669410052877D /* ViewController.swift in Sources */,
 				10F63541272669410052877D /* AppDelegate.swift in Sources */,
+				10E12CFC272B26600038A939 /* HistoryDtlViewController.swift in Sources */,
 				10F63563272712FE0052877D /* RestockViewController.swift in Sources */,
 				10F6355927266B740052877D /* ProductHistory.swift in Sources */,
 				10F6355827266B740052877D /* Product.swift in Sources */,
