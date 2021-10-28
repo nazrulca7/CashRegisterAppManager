@@ -115,7 +115,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
                 
                      
                       
-                      let  producth = ProductHistory(pName: productName, pQty:productQty, pPrice:Int(prodctPrice))
+                      let  producth = ProductHistory(pName: productName, pQty:productQty, pPrice:Float(Int(prodctPrice)))
                       findProduct[product_id].productQty =  productQty - self.addForBuy
                       
                       self.vProductHistory.append(producth)
