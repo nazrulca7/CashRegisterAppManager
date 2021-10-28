@@ -21,5 +21,8 @@ class ProductHistoryModel{
         return MyProductHistory
     }
     
+    func getAllProductsCount()->Int{
+        return getAllhistoryProducts().count
+    }
     
 }

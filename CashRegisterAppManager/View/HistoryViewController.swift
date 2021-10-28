@@ -8,38 +8,35 @@
 import UIKit
 
 class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    
+   
     var HistoryModel : ProductHistoryModel?
     
+    @IBOutlet weak var tblHistoryshow: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tblHistoryshow.dataSource = self
+     
         // Do any additional setup after loading the view.
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (HistoryModel?.getAllhistoryProducts().count) as! Int
-    }
-    
-
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let allProduct = HistoryModel!.getAllhistoryProducts()
-            let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell")!
-            
-            cell.textLabel?.text = String(allProduct[indexPath.row].productName) + "\n \(String(allProduct[indexPath.row].prodcutPrice))"
-            cell.detailTextLabel?.text = String(allProduct[indexPath.row].productQty)
-            return cell
-        
-        
-              
-              
-          
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (HistoryModel?.getAllProductsCount()) as! Int 
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let allProduct = HistoryModel!.getAllhistoryProducts()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell")!
+        
+        cell.textLabel?.text = String(allProduct[indexPath.row].productName)
+        cell.detailTextLabel?.text = String(allProduct[indexPath.row].productQty)
+        return cell
+    }
     
     
 

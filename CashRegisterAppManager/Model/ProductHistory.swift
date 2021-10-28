@@ -17,8 +17,8 @@ class ProductHistory{
   
     
     init(pName:String, pQty:Int, pPrice: Float ){
-        let currentDate = Date()
-       let pdatesale = currentDate
+        
+   
     productName = pName
     productQty = pQty
     prodcutPrice = pPrice
