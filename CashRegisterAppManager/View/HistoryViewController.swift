@@ -20,8 +20,19 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return (HistoryModel?.getAllhistoryProducts().count) as! Int
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let allProduct = HistoryModel!.getAllhistoryProducts()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell")!
+            
+            cell.textLabel?.text = String(allProduct[indexPath.row].productName) + "\n \(String(allProduct[indexPath.row].prodcutPrice))"
+            cell.detailTextLabel?.text = String(allProduct[indexPath.row].productQty)
+            return cell
+        
+        
+              
+              
+          
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
