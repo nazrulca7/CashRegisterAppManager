@@ -21,9 +21,10 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     var loadQty : Int = 0
     var addForBuy : Int = 0
     var Products : Product = Product()
+    var HistoryModel: ProductHistoryModel = ProductHistoryModel()
     
     //var productStock : ProductStock = [ProductStock]()
-    var vProductHistory  =  [ProductHistory]()
+    //var vProductHistory  =  [ProductHistory]()
     
     @IBOutlet weak var txtTotalDisplay: UITextField!
     
@@ -115,10 +116,10 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
                 
                      
                       
-                      let  producth = ProductHistory(pName: productName, pQty:productQty, pPrice:Float(Int(prodctPrice)))
+                     
                       findProduct[product_id].productQty =  productQty - self.addForBuy
-                      
-                      self.vProductHistory.append(producth)
+                      let  producthistory = ProductHistory(pName: productName, pQty:productQty, pPrice:prodctPrice)
+                      self.HistoryModel.addNewHistoryProduct(newproduct: producthistory)
                       
                       self.clearPanel()
                       
@@ -208,6 +209,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
             
             let ManagerView = segue.destination as? ManagerViewController
             ManagerView!.ProductVar = Products
+            ManagerView!.HistoryModel = HistoryModel
         }
         
        

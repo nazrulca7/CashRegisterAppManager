@@ -36,7 +36,11 @@ class ManagerViewController: UIViewController {
             RestockView.ProductVar = ProductVar
         }
         
-       
+        if(segue.identifier == "toHistory"){
+         
+            let toHistoryview = segue.destination as! HistoryViewController
+            toHistoryview.HistoryModel = HistoryModel
+        }
    
     
     }

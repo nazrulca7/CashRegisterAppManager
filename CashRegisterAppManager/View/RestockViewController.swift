@@ -91,7 +91,7 @@ class RestockViewController: UIViewController,UITableViewDelegate,UITableViewDat
                  
                        var qty = findProduct?[self.selectedRowId].productQty
                        
-                       let  producthistory = ProductHistory(pName: productName ?? "", pQty:productQty ?? 0, pPrice:Int(prodctPrice ?? 0))
+                       let  producthistory = ProductHistory(pName: productName ?? "", pQty:productQty ?? 0, pPrice:Float(prodctPrice ?? 0))
                        
                       
                        self.HistoryModel.addNewHistoryProduct(newproduct: producthistory)

@@ -11,12 +11,12 @@ class ProductHistory{
     
     var productName: String
     var productQty: Int
-    var prodcutPrice: Int
+    var prodcutPrice: Float
     var productsaleTime: Date
    // let dateFormatter : DateFormatter = DateFormatter()
   
     
-    init(pName:String, pQty:Int, pPrice: Int ){
+    init(pName:String, pQty:Int, pPrice: Float ){
         let currentDate = Date()
        let pdatesale = currentDate
     productName = pName
