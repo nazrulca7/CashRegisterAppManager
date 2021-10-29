@@ -20,19 +20,21 @@ class HistoryDtlViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-       
+        
         if(SelectRowId != -1){
         let ProductName = self.HistoryModel?.getAllhistoryProducts()[SelectRowId].productName
             let productQty = self.HistoryModel?.getAllhistoryProducts()[SelectRowId].productQty
            let prodcutPrice = self.HistoryModel?.getAllhistoryProducts()[SelectRowId].prodcutPrice
             let productsaleTime = self.HistoryModel?.getAllhistoryProducts()[SelectRowId].productsaleTime
-        
+           
             let  Total_cost = (Float(productQty!)) * (prodcutPrice!)
             lblDisplaydtl.text? = "Product Name: \(ProductName!)"
             lblproductQty.text? = "Product Qty :\(productQty!)"
             lblproductPrice.text? = "Product price :\(prodcutPrice!)"
             Totallbl.text? = "Total Cost : \(Total_cost)"
             lblproductDate.text? = "Date :\(productsaleTime!)"
+            
+            navigationItem.title = "\(ProductName!)"
         }else{
             
             lblDisplaydtl.text = "No Product"

@@ -17,7 +17,7 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tblHistoryshow.dataSource = self
-     
+        navigationItem.title = "History Items"
         // Do any additional setup after loading the view.
     }
     

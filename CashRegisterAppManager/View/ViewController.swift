@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     var loadQty : Int = 0
     var addForBuy : Int = 0
     var Products : Product = Product()
+    var SelectRowId : Int = -1
     var HistoryModel: ProductHistoryModel = ProductHistoryModel()
     
     //var productStock : ProductStock = [ProductStock]()
@@ -56,6 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         let productPrice = Products.getAllProducts()[indexPath.row].prodcutPrice
         let totalAmount = Float(selectQty) * productPrice
         print(selectedTrail)
+        SelectRowId = indexPath.row
         if (selectedTrail != ""){
          
          txtInputProductName.text = selectedTrail
@@ -83,7 +85,14 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
        
         addForBuy = Int(qtyShowtxt.text!) ?? 0
         print("addforBuy\(addForBuy) And Load \(self.loadQty)")
-        if(addForBuy > loadQty){ //if product Qty is more than availability
+        if(SelectRowId == -1){ //if product Qty is more than availability
+            
+            let alert = UIAlertController(title: "Error", message: "Quantity exceed Avaliablity", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Update Quantity", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            qtyShowtxt.text = String(loadQty )
+        }
+        if(addForBuy >= loadQty && loadQty < 1 ){ //if product Qty is more than availability
             
             let alert = UIAlertController(title: "Error", message: "Quantity exceed Avaliablity", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Update Quantity", style: UIAlertAction.Style.default, handler: nil))
@@ -94,45 +103,23 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         let alert = UIAlertController(title: "Do you want to add product to Cart?", message: "Are you sure?", preferredStyle: .alert)
         let action1 = UIAlertAction(title: "add", style: .default){ action
              in
-            if let name = self.txtInputProductName.text {
-               
-                
-              if self.lblTotalAmountShow.text != nil{
-                    let total =
-                  
-                  
-                  Int(self.lblTotalAmountShow.text!)
-                    
-                  //  let newProduct = Product(n: name, amount: total ?? 0)
+            
+                let total =  Int(self.lblTotalAmountShow.text!)
                     
                 let findProduct =   self.Products.getAllProducts()
-                  
-                  if let product_id = findProduct.firstIndex(where: {$0.productName == self.txtInputProductName.text}) {
-                     // do something with foo
+                       // do something with foo
                       
-                      var productQty=findProduct[product_id].productQty
-                      var productName=findProduct[product_id].productName
-                      var prodctPrice=findProduct[product_id].prodcutPrice
+                      let productQty=findProduct[self.SelectRowId].productQty
+                      let productName=findProduct[self.SelectRowId].productName
+                      let prodctPrice=findProduct[self.SelectRowId].prodcutPrice
                 
-                     
-                      
-                     
-                      findProduct[product_id].productQty =  productQty - self.addForBuy
+                      findProduct[self.SelectRowId].productQty =  productQty - self.addForBuy
                       let  producthistory = ProductHistory(pName: productName, pQty:productQty, pPrice:prodctPrice)
                       self.HistoryModel.addNewHistoryProduct(newproduct: producthistory)
                       
                       self.clearPanel()
                       
-                    
-                      
-                  }
-                 
                     self.VIEWProductTbl.reloadData()
-                  
-                  
-                }
-                
-            }
             
             
         }
@@ -150,6 +137,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         txtInputProductName.text = ""
         lblTotalAmountShow.text = ""
         qtyShowtxt.text = ""
+        SelectRowId = -1
     }
     
     @IBAction func btn1(_ sender: Any) {
